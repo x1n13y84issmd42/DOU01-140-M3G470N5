@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SocketIO bleat'</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="/css/style.css" rel="stylesheet">
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+			google.load("jquery", "1.7.1");
+		</script>
+		<script src="http://hackpanda.local:5051/socket.io/socket.io.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				socket = io.connect('http://hackpanda.local:5051');
+				console.log(socket);
+				socket.on('connect', function (data) {
+					$("#status").append("<p>Connected</p>");
+				});
+
+				socket.on('tweet', function(tweet){
+					console.log(tweet);
+					$("#tweets").append('<div class="tweet">Attach detected from:'+tweet.from+' to: '+tweet.to[0]+'</div>');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="status">
+			<h4>Status box</h4>
+		</div>
+
+		<div id="tweets">
+
+		</div>
+	</body>
+</html>

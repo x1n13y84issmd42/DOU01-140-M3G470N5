@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="./assets/x.css">
+	<link href='http://fonts.googleapis.com/css?family=Orbitron:400,900' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript" src='./assets/raphael-min.js'></script>
+	<script type="text/javascript" src='./assets/worldmap.js'></script>
+	<script type="text/javascript" src='./assets/world.js'></script>
+	<script type="text/javascript" src='./assets/FX.js'></script>
+	<script type="text/javascript" src='./assets/x.js'></script>
+
+	<script src="http://hackpanda.local:5051/socket.io/socket.io.js"></script>
+	<script src="./assets/main.js"></script>
+	<script type="text/javascript">
+
+$(function(){
+
+	$('.getcities').click(function(){
+		console.log(JSON.stringify(xCities));
+	});
+
+	$('.getcities').click(function(){
+		World.countries['RU'].Damage(5000000);
+	});
+
+	$('*').keyup(function(e)
+	{
+		FX.SetOptions(e.keyCode - 48);
+	})
+})
+	</script>
+</head>
+<body>
+	<div id="world"></div>
+	<!--<a href="javascript:void(0);" class="getcities">get cities</a>-->
+</body>
+</html>
