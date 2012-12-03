@@ -1,6 +1,11 @@
 var Twit = require('twit');
 
 var	io = require('socket.io').listen(process.env.PORT || 5051);
+
+io.configure(function () { 
+ 	io.set("transports", ["xhr-polling"]); 
+	io.set("polling duration", 10);
+});
 /*
 var	T = new Twit({
 		  consumer_key:         'AfSCr47qVaiTvjXSzmXA'
