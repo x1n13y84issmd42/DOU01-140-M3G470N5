@@ -1,13 +1,14 @@
 var Twit = require('twit');
-
-var	io = require('socket.io');
+var express = require('express');
+var app = express.createServer();
+var	io = require('socket.io').listen(app);
 
 io.configure(function () { 
  	io.set("transports", ["xhr-polling"]); 
 	io.set("polling duration", 10);
 });
 
-io.listen(process.env.PORT || 5051);
+app.listen(process.env.PORT || 5051);
 /*
 var	T = new Twit({
 		  consumer_key:         'AfSCr47qVaiTvjXSzmXA'
