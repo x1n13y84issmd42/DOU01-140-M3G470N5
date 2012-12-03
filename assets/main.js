@@ -132,7 +132,7 @@ Raphael('world', function () {
 });
 //socketIO connection
 $(document).ready(function(){
-	socket = io.connect('http://hackpanda.local:5051');
+	socket = io.connect('http://140.demo:5051');
 	socket.on('connect', function (data) {
 		//$("#status").append("<p>Connected</p>");
 	});
