@@ -1,0 +1,16 @@
+{
+  "name": "DOU01-140-M3G470N5",
+  "version": "1.0.0",
+
+  "dependencies":
+  {
+    "express": "2.5.x",
+    "twit": "1.0.x",
+    "socket.io": "0.9.11"
+  },
+
+  "engines": {
+    "node": "0.8.9",
+    "npm": "1.1.x"
+  }
+}

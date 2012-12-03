@@ -1,0 +1,14 @@
+#status {
+	border: 1px solid black;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+#tweets .tweet {
+	width: 500px;
+	padding: 20px 40px;
+	border:  1px solid rgba(0, 0, 0, .1);
+	border-radius: 3px;
+	margin: 20px 0 0 20px;
+}
